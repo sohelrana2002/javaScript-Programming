@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even or Odd function</title>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #User-input{
+            padding: 1rem 2rem;
+        }
+        button{
+            padding: .5rem 1rem;
+        }
+        .new-value{
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        <input placeholder="Enter your value" type="text" id="User-input" />
+    </h3>
+    <button onclick="isEvenOrOdd()">Check Even Or Odd</button>
+    <p class="new-value">Your value is</p>
+    <script>
+        function isEvenOrOdd() {
+            const userInput = document.getElementById("User-input").value;
+            const NewInput = document.querySelector(".new-value");
+            if (userInput % 2 === 0) {
+                NewInput.innerHTML = "Even Number";
+            } else {
+                NewInput.innerHTML = "Odd Number";
+            }
+        }
+    </script>
+</body>
+
+</html>
