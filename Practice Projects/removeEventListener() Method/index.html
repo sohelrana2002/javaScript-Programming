@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+#myDIV {
+  background-color: coral;
+  padding: 16px;
+}
+.myStyle{
+    font-size: 5rem;
+}
+#heading{
+    font-size: 6rem;
+    color: red;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The removeEventListener() Method</h2>
+
+<div id="myDIV">This orange element has an onmousemove event handler that displays a random number when you move the mouse inside.
+  <p>Click "Remove" to remove the event handler.</p>
+  <button onclick="removeHandler()">Remove</button>
+  <button onclick="StartAgainHandler()">Start again</button>
+</div>
+
+<p id="demo"></p>
+
+
+
+<script>
+    // ==========GET PARAMETER FROM addEvenListern() ===
+    // element.addEventListener(event, function, useCapture);
+
+const myDiv = document.getElementById("myDIV");
+const demo = document.getElementById("demo");
+myDiv.addEventListener("mousemove", myFunction);
+
+// ==========craete an Element ==========
+const newPara = document.createElement("p");
+// ========ADD CLASS=========
+// newPara.classList.add("myStyle");
+
+// ========ADD ID IN JS=======
+newPara.setAttribute("id", "heading");
+// ==========APPEND IN BODY=======
+document.body.appendChild(newPara);
+
+function removeHandler() {
+  myDiv.removeEventListener("mousemove", myFunction);
+}
+function StartAgainHandler() {
+  myDiv.addEventListener("mousemove", myFunction);
+}
+function myFunction() {
+    demo.innerHTML = Math.ceil(Math.random() * 100);
+    newPara.textContent = Math.ceil(Math.random() * 100);
+}
+</script>
+
+</body>
+</html>
+
+
