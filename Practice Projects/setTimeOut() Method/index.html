@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        button{
+            padding: 1rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ===============setInterval() method=========== -->
+    <!-- <h1>The Window Object</h1>
+    <h3>The setInterval() Method</h3>
+
+    <p id="demo"></p>
+    <button onclick="myStop()" id="button">stop it</button> -->
+
+    
+    <!-- ===============setTimeOut() method=========== -->
+    <h1>The Window Object</h1>
+    <h3>The setTimeOut() Method (3 sec later)</h3>
+
+    <p id="demo"></p>
+    <button onclick="myStop()" id="button">stop it</button>
+    <p id="clear"></p>
+
+
+
+    <script>
+    // ===============setInterval() method===========
+    // const demo = document.getElementById("demo");
+    // const button = document.getElementById("button");
+
+    // const myTimer = () => {
+    //     const date = new Date();
+    //     demo.innerHTML = date.toLocaleTimeString();
+    // }
+    // const myInterval = setInterval(myTimer, 1000);
+    // const myStop = () => clearInterval(myInterval);
+
+
+    // ===============setTimeOut() method===========
+    const demo = document.getElementById("demo");
+    const button = document.getElementById("button");
+    const clear = document.getElementById("clear");
+
+    const myTimer = () => {
+        demo.innerHTML = "Happy Birthday after 3 sec later";
+    }
+    const myTimeOut = setTimeout(myTimer, 3000);
+    const myStop = () => {
+        clearTimeout(myTimeOut);
+        clear.innerHTML = "clearTimeout is exicute"
+    };
+    
+
+    </script>
+
+</body>
+</html>
