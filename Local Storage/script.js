@@ -54,3 +54,39 @@ const getSohelInfoAccessble = JSON.parse(getSohelInfo);
 console.log(getSohelInfoAccessble.name);
 // output: Sohel Rana*/
 
+
+
+// ---set theme color in local storage---
+const themeSelector = document.querySelector("#themeSelector");
+const themeOption1 = document.querySelector(".theme-options1");
+const themeOption2 = document.querySelector(".theme-options2");
+const themeOption3 = document.querySelector(".theme-options3");
+const themeOption = document.querySelectorAll("option");
+const heading = document.querySelector("#heading");
+
+const getThemeValue = localStorage.getItem("theme");
+themeSelector.value = getThemeValue;
+// console.log(themeOption.value, "themeOption.value");
+selectTheme(getThemeValue);
+
+themeSelector.addEventListener("change", (e) =>{
+    console.log(e.target.value);
+    const themeValue = e.target.value;
+    localStorage.setItem("theme", themeValue)
+    selectTheme(themeValue);
+});
+
+function selectTheme(theme){
+    if(theme === "dark"){
+        document.body.style.backgroundColor = "#222";
+        heading.style.color = "#fff";
+        themeOption2.innerHTML = "Dark";
+    }else if(theme === "light"){
+        document.body.style.backgroundColor = "#e5e5e5";
+        themeOption3.innerHTML = "Light";
+    }else{
+        document.body.style.backgroundColor = "#fff";
+        heading.style.color = "#000";
+        themeOption1.innerHTML = "Select a theme";
+    }
+}
