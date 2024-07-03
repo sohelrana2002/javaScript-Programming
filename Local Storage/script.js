@@ -23,3 +23,34 @@
 // ==when we need to clear all  value from local storage then call clear function==
 // example:  clear : ƒ clear()
 // localStorage.clear("name");
+
+
+// --how to store object in local storage?--
+// theory: local storage only allow string but object is not string. that why we need to convert object into JSON, we know that JSON is a pure string
+
+/*const sohelInfo = {
+    name: "Sohel Rana",
+    age: 23,
+    education: "B.Sc in CSE"
+}
+
+const sohelInfoString = JSON.stringify(sohelInfo);
+// console.log(sohelInfoString);
+
+localStorage.setItem("sohelInfo", sohelInfoString);
+
+const getSohelInfo = localStorage.getItem("sohelInfo");
+
+console.log(getSohelInfo);
+
+// --check typeof getSohelInfo
+console.log(typeof getSohelInfo);
+
+// if we need to access value from local storage then 
+const getSohelInfoAccessble = JSON.parse(getSohelInfo);
+
+// console.log(getSohelInfoAccessble);
+
+console.log(getSohelInfoAccessble.name);
+// output: Sohel Rana*/
+
