@@ -58,3 +58,16 @@
 // params.append("foo", 4);
 // console.log(params.toString(), "params");
 //Query string is now: 'foo=1&bar=2&foo=4'
+
+
+// ---delete method=----
+// The delete() method of the URLSearchParams interface deletes specified parameters and their associated value(s) from the list of all search parameters.
+
+// const url = new URL("https://example.com?name=sohel+rana&age=23");
+// const params = new URLSearchParams(url.search);
+// console.log(`Query string (before):\t ${params}`);
+// // output:  name=sohel+rana&age=23 
+// params.delete("age");
+// console.log(`Query string (after):\t ${params}`);
+// // utput:  name=sohel+rana
+
