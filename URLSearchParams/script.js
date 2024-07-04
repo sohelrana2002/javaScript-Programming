@@ -69,5 +69,17 @@
 // // output:  name=sohel+rana&age=23 
 // params.delete("age");
 // console.log(`Query string (after):\t ${params}`);
-// // utput:  name=sohel+rana
+// // output:  name=sohel+rana
 
+
+// ====entries method===
+// The entries() method of the URLSearchParams interface returns an iterator allowing iteration through all key/value pairs contained in this object. The iterator returns key/value pairs in the same order as they appear in the query string. The key and value of each pair are string objects.
+
+// const searchParam = new URLSearchParams("name=Sohel+Rana&age=23");
+
+// for(const [key, value] of searchParam.entries()){
+//     console.log(`${key} = ${value}`);
+// }
+// output:
+// name = Sohel Rana
+// script.js:81 age = 23
