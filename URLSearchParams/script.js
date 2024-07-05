@@ -94,4 +94,27 @@
 // })
 // output: 
 // Sohel Rana: name
-// script.js:93 23: age
+// 23: age
+
+// ====has() method===
+// he has() method of the URLSearchParams interface returns a boolean value that indicates whether the specified parameter is in the search parameters.
+
+// const searchParam = new URLSearchParams("name=Sohel+Rana&age=23");
+
+// ---check only key---
+// console.log(`name? : ${searchParam.has("name")}`);
+// console.log(`age? : ${searchParam.has("age")}`);
+// console.log(`Education? : ${searchParam.has("education")}`);
+// output:
+// name? : true
+// age? : true
+// Education? : false
+
+// ----check with ey and value ---
+// console.log(`name? : ${searchParam.has("name", "Sohel Rana")}`);
+// console.log(`age? : ${searchParam.has("age", 20)}`);
+// console.log(`Education? : ${searchParam.has("education")}`);
+// output:
+// name? : true
+// age? : false
+// Education? : false
