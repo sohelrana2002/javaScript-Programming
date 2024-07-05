@@ -83,3 +83,15 @@
 // output:
 // name = Sohel Rana
 // script.js:81 age = 23
+
+// ====forEach method=== 
+// The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.
+
+// const searchParam = new URLSearchParams("name=Sohel+Rana&age=23");
+
+// searchParam.forEach((value, key) =>{
+//     console.log(`${value}: ${key}`);
+// })
+// output: 
+// Sohel Rana: name
+// script.js:93 23: age
