@@ -131,3 +131,13 @@
 
 // // Display the sorted query string
 // console.log(searchParams.toString());
+
+
+// ==toString() method====
+// The toString() method of the URLSearchParams interface returns a query string suitable for use in a URL.
+// const url = new URL("https://example.com?foo=1&bar=2");
+const url = new URL("http://sohel.com?name=sohel+rana&age=23&degree=B.Sc+in+CSE");
+console.log(url);
+const searchParam = new URLSearchParams(url.search);
+
+console.log(`toString: ${searchParam.toString()}`);
