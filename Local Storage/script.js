@@ -1,6 +1,4 @@
-
 // Theroycal: localStorage in JavaScript allows web applications to store data locally within the user's browser – with no expiration date
-
 
 // Local Storage only allow key and value pair in function & it only allow string variable
 
@@ -23,7 +21,6 @@
 // ==when we need to clear all  value from local storage then call clear function==
 // example:  clear : ƒ clear()
 // localStorage.clear("name");
-
 
 // --how to store object in local storage?--
 // theory: local storage only allow string but object is not string. that why we need to convert object into JSON, we know that JSON is a pure string
@@ -54,8 +51,6 @@ const getSohelInfoAccessble = JSON.parse(getSohelInfo);
 console.log(getSohelInfoAccessble.name);
 // output: Sohel Rana*/
 
-
-
 // ---set theme color in local storage---
 const themeSelector = document.querySelector("#themeSelector");
 const themeOption1 = document.querySelector(".theme-options1");
@@ -69,24 +64,24 @@ themeSelector.value = getThemeValue;
 // console.log(themeOption.value, "themeOption.value");
 selectTheme(getThemeValue);
 
-themeSelector.addEventListener("change", (e) =>{
-    console.log(e.target.value);
-    const themeValue = e.target.value;
-    localStorage.setItem("theme", themeValue)
-    selectTheme(themeValue);
+themeSelector.addEventListener("change", (e) => {
+  console.log(e.target.value);
+  const themeValue = e.target.value;
+  localStorage.setItem("theme", themeValue);
+  selectTheme(themeValue);
 });
 
-function selectTheme(theme){
-    if(theme === "dark"){
-        document.body.style.backgroundColor = "#222";
-        heading.style.color = "#fff";
-        themeOption2.innerHTML = "Dark";
-    }else if(theme === "light"){
-        document.body.style.backgroundColor = "#e5e5e5";
-        themeOption3.innerHTML = "Light";
-    }else{
-        document.body.style.backgroundColor = "#fff";
-        heading.style.color = "#000";
-        themeOption1.innerHTML = "Select a theme";
-    }
+function selectTheme(theme) {
+  if (theme === "dark") {
+    document.body.style.backgroundColor = "#222";
+    heading.style.color = "#fff";
+    themeOption2.innerHTML = "Dark";
+  } else if (theme === "light") {
+    document.body.style.backgroundColor = "#e5e5e5";
+    themeOption3.innerHTML = "Light";
+  } else {
+    document.body.style.backgroundColor = "#fff";
+    heading.style.color = "#000";
+    themeOption1.innerHTML = "Select a theme";
+  }
 }
