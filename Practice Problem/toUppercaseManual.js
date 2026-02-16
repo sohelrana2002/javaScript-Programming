@@ -14,5 +14,7 @@ function toUppercaseManual(str) {
   return result;
 }
 
-console.log(toUppercaseManual("sohel"));
-console.log(toUppercaseManual("ROLEX"));
+const prompt = require("prompt-sync")();
+const str = String(prompt("Enter a string: "));
+
+console.log(toUppercaseManual(str));
