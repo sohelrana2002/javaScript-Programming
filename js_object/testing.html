@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Objects</h1>
+    <h2>The Object.entries() Method</h2>
+    <p>
+      Object.entries() returns an array of the key/value pairs in an object.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      let text = Object.entries(person);
+      console.log("text", text);
+
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
