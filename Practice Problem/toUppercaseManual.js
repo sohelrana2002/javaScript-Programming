@@ -1,3 +1,5 @@
+// Convert lowercase letter to uppercase letter manually
+
 function toUppercaseManual(str) {
   let result = "";
 

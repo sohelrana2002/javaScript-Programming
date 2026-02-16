@@ -1,3 +1,5 @@
+// Reverse a string manually
+
 function reverseString(str) {
   let result = "";
 

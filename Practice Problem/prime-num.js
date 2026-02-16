@@ -1,3 +1,5 @@
+// Check prime number or not
+
 function isPrime(num) {
   if (num <= 1) {
     console.log("This number is not prime!");

@@ -1,3 +1,5 @@
+// Find largest number in an array
+
 function largestNumber(arr) {
   let largeNum = arr[0];
 

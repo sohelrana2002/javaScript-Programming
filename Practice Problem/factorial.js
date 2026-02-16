@@ -1,3 +1,5 @@
+// Find factorial of a number
+
 function factorial(num) {
   if (num < 0) return "Factorial not defined!";
 

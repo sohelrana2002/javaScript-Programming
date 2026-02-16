@@ -1,3 +1,5 @@
+// Check prime number using sieve of eratosthenes
+
 function Sieve(num) {
   let isPrime = new Array(num + 1).fill(true);
 
