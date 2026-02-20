@@ -13,4 +13,12 @@ function removeDuplicate(arr) {
   console.log(arr);
 }
 
-removeDuplicate([5, 10, 15, 5, 10]);
+const prompt = require("prompt-sync")();
+const size = parseInt(prompt("Enter number of elements: "));
+let arr = [];
+
+for (let i = 0; i < size; i++) {
+  arr.push(parseInt(prompt(`Enter ${i + 1} element: `)));
+}
+
+removeDuplicate(arr);
