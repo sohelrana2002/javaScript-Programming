@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Sohel Rana",
+        "education": "B.SC in CSE",
+        "title": "Web Developer",
+        "experience": "3 years",
+        "salary": 30000
+    },
+    {
+        "id": 2,
+        "name": "Fahim Rahman",
+        "education": "B.SC in CSE",
+        "title": "Trader",
+        "experience": "2 years",
+        "salary": 50000
+    },
+    {
+        "id": 3,
+        "name": "Sabit Raihan",
+        "education": "B.SC in CSE",
+        "title": "Mathematican",
+        "experience": "3 years",
+        "salary": 40000
+    },
+    {
+        "id": 4,
+        "name": "Akib Ahmed Imu",
+        "education": "B.SC in CSE",
+        "title": "Python Developer",
+        "experience": "3 years",
+        "salary": 30000
+    }
+]
