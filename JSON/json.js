@@ -5,7 +5,6 @@
 // JSON is used to send data between computers
 // JSON is language independent *
 
-
 // JSON Syntax Rules
 // JSON syntax is derived from JavaScript object notation syntax:
 
@@ -21,7 +20,6 @@
 // Example
 // "name":"John"
 
-
 // ==============JSON VALUE============
 // JSON Values
 // In JSON, values must be one of the following data types:
@@ -33,7 +31,6 @@
 // a boolean
 // null
 
-
 // =============HOW TO ACCESS OBJECT IN AN ARRAY=======
 // const myObj = {"employees" : [
 //     { "firstName":"John", "lastName":"Doe" },
@@ -42,15 +39,11 @@
 //   ]};
 // //   console.log(myObj.employees[0].firstName);
 
-
-
 //   const res = myObj.employees.map((curIndex) =>{
 //     return `First Name: ${curIndex.firstName} Last Name: ${curIndex.lastName}`
 //   }).sort();
 
 //   console.log(res);
-
-
 
 // ==============GETTING BOLLIAN VALUE============
 // const myObj = {
@@ -61,14 +54,12 @@
 //     ]
 // };
 
-
 // ===========GET TRUE VALUE=============
 //   const res = myObj.employees.filter((curIndex) =>{
 //     return curIndex.pass === true ;
 //   });
 
 //   console.log(res);
-
 
 // =============GET FALSE VALUE=============
 
@@ -78,15 +69,46 @@
 
 //   console.log(res);
 
-
 // ==========CONVERT JSON TO JS PURE OBJ=========
 // const myObj = '{ "firstName": "John", "lastName": "Doe", "pass": true }';
 
 //     console.log(JSON.parse(myObj));
 
-
 // ======GET BIRTH DAY USING DATE METHOD=======
 // const myObj = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
 // const jsObj = JSON.parse(myObj);
+// console.log("JS OBJ: ", jsObj);
 // jsObj.birth = new Date(jsObj.birth);
-// console.log(`Name: ${jsObj.name} Age: ${jsObj.birth}`); 
+// console.log(`Name: ${jsObj.name} Age: ${jsObj.birth}`);
+
+// Person JSON convert into Person Obj using JSON.parse()
+/*
+const personJSON = `{
+    "name": "Sohel Rana",
+    "education": "B.SC in CSE",
+    "title": "Web Developer",
+    "experience": "3 years",
+    "salary": 30000
+}`;
+
+const personObj = JSON.parse(personJSON);
+console.log("Person JSON: ", personJSON);
+console.log("Person Obj: ", personObj);
+console.log("Person Name: ", personObj.name);
+console.log("Person Salary: ", personObj.salary);
+*/
+
+// Person Obj convert into Person JSON
+/*
+const personObj = {
+  name: "Sohel Rana",
+  education: "B.Sc in CSE",
+  title: "Web Developer",
+  experience: "3 years",
+  salary: 30000,
+};
+
+const personJSON = JSON.stringify(personObj);
+console.log(personObj);
+console.log(personJSON);
+*/
