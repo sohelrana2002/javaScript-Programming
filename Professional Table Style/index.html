@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Sales Dashboard Table</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f9;
+        color: #333;
+        padding: 40px 20px;
+      }
+
+      .table-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .table-header-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      .responsive-wrapper {
+        width: 100%;
+        overflow-x: auto; /* কলাম বেশি হলে মোবাইলে ডানে-বামে স্ক্রোল হবে */
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .custom-dashboard-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        min-width: 800px;
+      }
+
+      .custom-dashboard-table thead tr {
+        background-color: #0f172a;
+        color: #ffffff;
+      }
+
+      .custom-dashboard-table th {
+        padding: 16px 12px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+
+      .custom-dashboard-table thead tr th:first-child {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+
+      .custom-dashboard-table thead tr th:last-child {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      .custom-dashboard-table td {
+        padding: 14px 12px;
+        font-size: 14px;
+        border-bottom: 1px solid #e2e8f0; /* হালকা গ্রে বর্ডার */
+        color: #475569;
+        vertical-align: middle;
+      }
+
+      .custom-dashboard-table tbody tr:nth-child(even) {
+        background-color: #dee5ecaa;
+      }
+
+      .custom-dashboard-table tbody tr:hover {
+        background-color: #f1f5f9;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .custom-dashboard-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .badge.mobile {
+        background-color: #e0f2fe;
+        color: #0369a1;
+      }
+
+      .badge.cash {
+        background-color: #dcfce7;
+        color: #15803d;
+      }
+
+      .amount-text {
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      .invoice-id {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <div class="table-header-title">Recent Sales History</div>
+
+      <div class="responsive-wrapper">
+        <table class="custom-dashboard-table">
+          <thead>
+            <tr>
+              <th>Invoice No</th>
+              <th>Customer Name</th>
+              <th>Medicine Name</th>
+              <th>Qty</th>
+              <th>Payment Method</th>
+              <th>Total Amount</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="invoice-id">INV-10039</td>
+              <td>Rashed Hasan Joy</td>
+              <td>Napa 500mg</td>
+              <td>70</td>
+              <td><span class="badge mobile">Mobile (Nagad)</span></td>
+              <td class="amount-text">33.95 BDT</td>
+            </tr>
+
+            <tr>
+              <td class="invoice-id">INV-10038</td>
+              <td>Rashed Hasan</td>
+              <td>Ace Plus</td>
+              <td>60</td>
+              <td><span class="badge mobile">Mobile (bKash)</span></td>
+              <td class="amount-text">30.00 BDT</td>
+            </tr>
+
+            <tr>
+              <td class="invoice-id">INV-10037</td>
+              <td>Anik Rahman</td>
+              <td>Sergel 20mg</td>
+              <td>14</td>
+              <td><span class="badge cash">Cash</span></td>
+              <td class="amount-text">98.00 BDT</td>
+            </tr>
+
+            <tr>
+              <td class="invoice-id">INV-10036</td>
+              <td>Tamim Iqbal</td>
+              <td>Napa Extend</td>
+              <td>30</td>
+              <td><span class="badge cash">Cash</span></td>
+              <td class="amount-text">45.00 BDT</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
